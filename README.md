@@ -349,6 +349,10 @@ print("Frecuencia media:",freq_media)
 print("Frecuencia mediana:",freq_mediana)
 print("Desviación estándar:",freq_std)
 
+Frecuencia media: 249.95
+Frecuencia mediana: 249.95
+Desviación estándar: 144.3375644106551
+
 ```
 
 ```python
