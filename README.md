@@ -62,6 +62,36 @@ señales.
 dominio de la frecuencia. 
 
 # Procedimientos y resultados
+## PARTE A
+Teniendo el sistema ℎ[𝑛] = {𝑐𝑎𝑑𝑎 𝑑í𝑔𝑖𝑡𝑜 𝑑𝑒 𝑠𝑢 𝑐ó𝑑𝑖𝑔𝑜} (ej: ℎ[𝑛] = {5,6,0,0,1,4,6})
+y la señal 𝑥[𝑛] ={𝑐𝑎𝑑𝑎 𝑑í𝑔𝑖𝑡𝑜 𝑑𝑒 𝑠𝑢 𝑐é𝑑𝑢𝑙𝑎} (ej: 𝑥[𝑛] = {1,0,2,1,4,5,4,8,1,9}):
+
+
+1. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando sumatorias (a
+mano)
+2. Encuentre la representación gráfica y secuencial (a mano).
+
+   
+# Adriana 
+ℎ[𝑛]= {5,6,0,0,8,5,0}
+
+𝑥[𝑛]= {1,0,7,6,2,4,2,2,6,3}
+
+
+# Yuliana 
+ℎ[𝑛]= {5,6,0,0,8,6,2}
+
+
+𝑥[𝑛]= {1,0,7,3,5,9,9,5,7,0}
+
+
+3. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando Python.
+
+   
+4. Encuentre la representación gráfica y secuencial usando Python.
+
+
+
 
 
 
