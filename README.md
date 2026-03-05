@@ -77,6 +77,8 @@ mano)
 
 𝑥[𝑛]= {1,0,7,6,2,4,2,2,6,3}
 
+![capture_temp](https://github.com/user-attachments/assets/f56a3044-71c6-4f4e-9e64-b88ef1f7fcd3)
+
 
 ### Yuliana 
 ℎ[𝑛]= {5,6,0,0,8,6,2}
