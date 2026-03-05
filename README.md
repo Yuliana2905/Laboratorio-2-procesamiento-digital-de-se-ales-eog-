@@ -95,12 +95,16 @@ convolución h[n] * x[n]
 
 
 
-
-
 ### Yuliana 
 ℎ[𝑛]= {5,6,0,0,8,6,2}
 
+![capture_temp](https://github.com/user-attachments/assets/087a53a0-9f81-4dcb-aa19-7e6351274e0c)
+
+
 𝑥[𝑛]= {1,0,7,3,5,9,9,5,7,0}
+
+![capture_temp](https://github.com/user-attachments/assets/679807bf-7484-4e67-b6f8-f3ed8feabbea)
+
 
 
 3. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando Python.
