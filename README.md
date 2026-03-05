@@ -1,12 +1,12 @@
 # Laboratorio 2 procesamiento digital de señales eog
 
-Docente: Carolina Corredor
+## Docente: Carolina Corredor
 
-Participantes:
+## Participantes:
 
-Adriana Valentina Alarcon Ramirez 
+### Adriana Valentina Alarcon Ramirez 
 
-Liseth Yuliana Clavijo Mesa
+### Liseth Yuliana Clavijo Mesa
 
 # Introducción
 
@@ -115,9 +115,38 @@ convolución h[n] * x[n]
 4. Encuentre la representación gráfica y secuencial usando Python.
 
 
+## Parte B
+
+
+Defina las señales: 
+
+[𝑛𝑇] = 𝑐𝑜𝑠(2𝜋100𝑛𝑇) para 0 ≤ 𝑛 < 9;  
+[𝑛𝑇] =𝑠𝑖𝑛(2𝜋100𝑛𝑇) para 0 ≤ 𝑛 < 9;  
+Ts=1.25𝑚𝑠  
+0≤n<9 
+Se toman 9 muestras
+
+𝑇 = 1.25
+T=1.25ms=1.25×10−3s
+
+Las señales que se generan son:
+-𝑥1[𝑛]​
+[n] → señal coseno
+-𝑥2[𝑛]
+[n] → señal seno
+Ambas tienen la misma frecuencia pero están desfasadas 90°, porque el seno es un coseno desplazado.
+
+1. Encuentre la correlación cruzada entre ambas señales.
+
+## Correlacion cruzada
 
 
 
+<img width="990" height="390" alt="image" src="https://github.com/user-attachments/assets/ddc82ae6-6f6b-4a71-a810-b2eb7ac13380" />
 
+
+3. Encuentre la representación gráfica y describa la secuencia resultante. 
+4. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en 
+el procesamiento digital de señales? 
 
 
