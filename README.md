@@ -289,17 +289,87 @@ Para analizar el contenido frecuencial de la señal se aplicó la Transformada R
 A partir de la FFT se obtuvieron:
 Espectro de magnitud de la señal, que muestra las frecuencias presentes, densidad espectral de potencia (PSD) que describe cómo se distribuye la energía de la señal en función de la frecuencia.
 
-La PSD se representó en escala logarítmica (dB) con el fin de visualizar con mayor claridad tanto las componentes de alta energía como aquellas de menor amplitud.
+```python
 
-Adicionalmente se calcularon estadísticos espectrales, tales como:
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+data=pd.read_csv("Medicion_DAQ_27.csv")
+t=data["Tiempo(s)"]
+x=data["Voltaje (V)"]
+Ts=np.mean(np.diff(t))
+fs=1/Ts
+N=len(x)
+#Trans fourier
+X=np.fft.fft(x)
+# vector de frecuencias
+frecuencias=np.fft.fftfreq(N, Ts)
+#f positivas
+mask=frecuencias >= 0
+freq_pos=frecuencias[mask]
+X_pos=np.abs(X[mask])
 
-Frecuencia media, que representa el centro de gravedad del espectro.
 
-Frecuencia mediana, que divide la distribución de energía espectral en dos partes iguales.
+plt.figure()
+plt.plot(freq_pos, X_pos)
+plt.title("Transformada de Fourier de la señal")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Magnitud")
+plt.show()
+```
 
-Desviación estándar en frecuencia, que indica la dispersión de las componentes frecuenciales.
+<img width="732" height="565" alt="image" src="https://github.com/user-attachments/assets/e52c8474-5aff-4223-be6f-7ea501c5e252" />
 
-Finalmente, se representó un histograma de la potencia espectral en escala logarítmica, lo cual permite observar la distribución de la energía de las diferentes componentes frecuenciales presentes en la señal.
+
+Adicionalmente se calcularon estadísticos espectrales: Frecuencia media que representa el centro de gravedad del espectro, Frecuencia mediana, que divide la distribución de energía espectral en dos partes iguales y Desviación estándar en frecuencia que indica la dispersión de las componentes frecuenciales.
+Finalmente, se realizo el histograma de la potencia espectral en escala logarítmica, lo cual permite observar la distribución de la energía de las diferentes componentes frecuenciales presentes en la señal.
+
+```python
+
+PSD=(np.abs(X)**2)/N
+PSD_pos=PSD[mask]
+
+plt.figure()
+plt.plot(freq_pos, PSD_pos)
+plt.title("Densidad espectral de potencia")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Potencia")
+plt.show()
+
+```
+
+<img width="734" height="573" alt="image" src="https://github.com/user-attachments/assets/14c548a6-e9dd-44e4-ad38-afbcd50b9758" />
+
+```python
+
+freq_media=np.mean(freq_pos)
+freq_mediana=np.median(freq_pos)
+freq_std=np.std(freq_pos)
+print("Frecuencia media:",freq_media)
+print("Frecuencia mediana:",freq_mediana)
+print("Desviación estándar:",freq_std)
+
+```
+
+```python
+plt.figure(figsize=(8,5))
+
+PSD_log=10*np.log10(PSD_pos+1e-12)
+
+plt.hist(PSD_log,bins=60,edgecolor='black')
+plt.title("Histograma de potencia espectral en escala logarítmica")
+plt.xlabel("Potencia espectral (dB)")
+plt.ylabel("Número de componentes")
+plt.grid(True)
+plt.show()
+
+```
+
+<img width="730" height="469" alt="image" src="https://github.com/user-attachments/assets/b402ee92-a547-4814-aa2f-ebcc682a697b" />
+
+
+
+
 
 
 
