@@ -120,6 +120,65 @@ convolución h[n] * x[n]
 4. Encuentre la representación gráfica y secuencial usando Python.
 
 
+Se definió la señal discreta h(n) y x(n) y se representaron mediante la función plt.stem, que permite graficar valores discretos en forma de impulsos. En la gráfica se observa la variación de la amplitud de la señal en función del índice n, añadiendo título y etiquetas a los ejes para una mejor interpretación
+
+### Adriana 
+
+```python
+#Señal h(n) adriana
+x = [0, 1, 2, 3, 4, 5, 6]
+h = [5, 6, 0, 0, 8, 5, 0]
+
+plt.stem(x,h)
+plt.title('Grafica señal h(n)', fontsize=14, fontweight='bold')
+plt.xlabel('Índice discreto n', fontsize=12)
+plt.ylabel('Amplitud de h[n]', fontsize=12)
+Se grafica la señal de salida  𝑦[𝑛]
+```
+
+<img width="720" height="578" alt="image" src="https://github.com/user-attachments/assets/b32b0a81-c4c2-4e09-b282-793dfb8b0f2a" />
+
+
+```python
+#Señal x(n) Adriana 
+x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+h = [1, 0, 7, 6, 2, 4, 2, 2, 6, 3]
+
+plt.stem(x,h)
+plt.title('Grafica señal x(n)', fontsize=14, fontweight='bold')
+plt.xlabel('Índice discreto n', fontsize=12)
+plt.ylabel('Amplitud de x[n]', fontsize=12)
+```
+
+<img width="736" height="572" alt="image" src="https://github.com/user-attachments/assets/7e0cc856-3891-4c85-8a2b-9da2a174637e" />
+
+
+Convolución: Para ello se utiliza la función np.convolve(x, h), la cual genera una nueva secuencia y[n] que representa el resultado de combinar ambas señales.
+Posteriormente, con matplotlib, se grafica el resultado en un diagrama de tallo (stem plot), el cual es adecuado para señales discretas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+#Convolucion Adriana
+x = np.array([1,0,7,6,2,4,2,2,6,3])
+h = np.array([5,6,0,0,8,5,0])
+y=np.convolve(x,h)
+plt.figure(figsize=(10,4))
+plt.stem(y)
+plt.title('Convolución de las señales x[n] y h[n]', fontsize=14, fontweight='bold')
+plt.xlabel('Índice discreto n', fontsize=12)
+plt.ylabel('Amplitud de y[n]', fontsize=12)
+plt.grid(True)
+plt.show()
+```
+
+<img width="722" height="342" alt="image" src="https://github.com/user-attachments/assets/66eef21b-f2b9-4791-a1f6-5eef5a199d84" />
+
+
+
+
+
+
 
 
 
