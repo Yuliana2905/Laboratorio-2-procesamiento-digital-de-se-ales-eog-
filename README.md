@@ -459,6 +459,21 @@ En conjunto estas herramientas permiten mejorar la calidad de las imágenes y ex
 3. ¿En qué se diferencia la correlación cruzada de la convolución?
 
 -La correlación cruzada y la convolución son operaciones matemáticas utilizadas para comparar o combinar señales, pero tienen propósitos diferentes. La correlación cruzada se utiliza principalmente para medir la similitud entre dos señales cuando una se desplaza respecto a la otra, lo que permite detectar retardos o encontrar patrones similares. En cambio, la convolución se utiliza para determinar la salida de un sistema cuando se conoce la señal de entrada y la respuesta del sistema, siendo fundamental en el análisis de sistemas lineales. Matemáticamente son operaciones similares, pero en la convolución una de las señales se invierte en el tiempo antes de desplazarse, mientras que en la correlación cruzada no se realiza esta inversión.
+# Diagramas de flujo 
+### Parte A
+
+<img width="273" height="754" alt="image" src="https://github.com/user-attachments/assets/02ef0d13-29d0-46b1-92e7-2da7cfe9f059" />
+
+
+### Parte B
+
+<img width="335" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8cde7b-9abb-48f3-bba7-a7b1517f62f5" />
+
+
+### Parte C
+
+<img width="292" height="776" alt="image" src="https://github.com/user-attachments/assets/4e33867a-2a63-4c88-ad56-fd39387f3348" />
+
 
 # Conclusiones
 
