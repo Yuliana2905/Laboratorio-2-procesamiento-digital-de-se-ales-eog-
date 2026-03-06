@@ -452,8 +452,22 @@ la correlación se emplea para medir la similitud entre dos imágenes o entre un
 
 En conjunto estas herramientas permiten mejorar la calidad de las imágenes y extraer información importante para diferentes aplicaciones, como el diagnóstico médico mediante imágenes biomédicas.
 
+2. ¿En cuáles contextos de aplicación la transformada de Fourier ofrece un conjunto de características con mayor poder discriminativo que las que suelen considerarse desde el dominio temporal?
+
+-La transformada de Fourier es más útil cuando la información importante de una señal está relacionada con sus componentes de frecuencia. En estos casos permite identificar con mayor claridad características que en el dominio temporal no son fáciles de observar. Esto ocurre, por ejemplo, en el análisis de audio y voz, donde se identifican tonos o frecuencias dominantes; en procesamiento de imágenes, para detectar patrones y texturas; en análisis de vibraciones en sistemas mecánicos, para encontrar fallas o resonancias; y en señales biomédicas como ECG o EEG, donde es importante analizar ritmos o bandas de frecuencia específicas. En estos contextos, el dominio de la frecuencia permite distinguir mejor las características de la señal que el dominio temporal.
+   
+3. ¿En qué se diferencia la correlación cruzada de la convolución?
+
+-La correlación cruzada y la convolución son operaciones matemáticas utilizadas para comparar o combinar señales, pero tienen propósitos diferentes. La correlación cruzada se utiliza principalmente para medir la similitud entre dos señales cuando una se desplaza respecto a la otra, lo que permite detectar retardos o encontrar patrones similares. En cambio, la convolución se utiliza para determinar la salida de un sistema cuando se conoce la señal de entrada y la respuesta del sistema, siendo fundamental en el análisis de sistemas lineales. Matemáticamente son operaciones similares, pero en la convolución una de las señales se invierte en el tiempo antes de desplazarse, mientras que en la correlación cruzada no se realiza esta inversión.
+
+# Conclusiones
+
+La correlación cruzada permite analizar el grado de similitud entre dos señales cuando una se desplaza respecto a la otra. En este ejercicio se calcularon y graficaron dos señales discretas, un coseno y un seno de la misma frecuencia, y posteriormente se obtuvo su correlación cruzada. A partir de la gráfica resultante se observa que la secuencia de correlación muestra cómo cambia la similitud entre las señales para diferentes desplazamientos. Debido al desfase de 90° entre el seno y el coseno, el valor máximo de correlación no ocurre exactamente en cero. Este tipo de análisis es importante en el procesamiento digital de señales, ya que permite detectar retardos, comparar patrones y analizar señales en diferentes aplicaciones, incluyendo sistemas de comunicación y señales biomédicas.
+
 # Referencias biblioraficas 
 Jena, S. K. (2025). Fourier, Laplace, and the tangled love affair with transforms: The art of signal synthesis and analysis. Springer
+Oppenheim, A. V., & Schafer, R. W. (2010). Discrete-Time Signal Processing (3rd ed.). Pearson. https://doi.org/10.1109/9780470544554
+Proakis, J. G., & Manolakis, D. G. (2007). Digital Signal Processing: Principles, Algorithms, and Applications (4th ed.). Pearson Prentice Hall.
 
 
 
