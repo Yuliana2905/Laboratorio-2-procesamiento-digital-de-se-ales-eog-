@@ -249,10 +249,7 @@ lags = np.arange(-(len(x1)-1), len(x1))
 Se realizan dos gráficas:
 Señales originales:
 
-<img width="990" height="390" alt="image" src="https://github.com/user-attachments/assets/ee59dc22-e126-45ea-b3f3-4ff2712e4369" />
-
-
-
+<img width="887" height="649" alt="image" src="https://github.com/user-attachments/assets/983f6064-f6fc-4af0-961a-14b1883111bc" />
 
 Se representan las señales discretas:
 x1[n] (coseno)
@@ -260,14 +257,21 @@ x2[n] (seno)
 
 Ambas señales tienen la misma frecuencia pero están desfasadas.
 
-Correlación cruzada
+Correlación cruzada:
+
+<img width="850" height="671" alt="image" src="https://github.com/user-attachments/assets/0a15507e-69c8-4da0-a8ae-962841e28ca8" />
+
 
 La correlación cruzada genera una secuencia de 17 muestras, ya que:
 2𝑁−1=2(9)−1=17
 Esta secuencia muestra el nivel de similitud entre las dos señales para diferentes desplazamientos.
 
 Debido al desfase entre el seno y el coseno, el valor máximo de correlación no ocurre exactamente en el desplazamiento cero.
-4. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales? 
+
+
+4. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales?
+
+La correlación cruzada es una herramienta muy utilizada en el procesamiento digital de señales porque permite comparar dos señales y determinar qué tan parecidas son cuando una se desplaza respecto a la otra. Gracias a esto, se puede detectar si existe un retardo o desfase entre señales, identificar patrones o similitudes dentro de una señal y sincronizar señales en sistemas de comunicación. Además, en el área biomédica se emplea para analizar señales fisiológicas como el ECG o el EEG, permitiendo comparar formas de onda y detectar eventos o comportamientos similares en diferentes registros.
 
 ## PARTE C
 
