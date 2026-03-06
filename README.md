@@ -269,7 +269,7 @@ Esta secuencia muestra el nivel de similitud entre las dos señales para diferen
 Debido al desfase entre el seno y el coseno, el valor máximo de correlación no ocurre exactamente en el desplazamiento cero.
 
 
-4. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales?
+3. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales?
 
 La correlación cruzada es una herramienta muy utilizada en el procesamiento digital de señales porque permite comparar dos señales y determinar qué tan parecidas son cuando una se desplaza respecto a la otra. Gracias a esto, se puede detectar si existe un retardo o desfase entre señales, identificar patrones o similitudes dentro de una señal y sincronizar señales en sistemas de comunicación. Además, en el área biomédica se emplea para analizar señales fisiológicas como el ECG o el EEG, permitiendo comparar formas de onda y detectar eventos o comportamientos similares en diferentes registros.
 
