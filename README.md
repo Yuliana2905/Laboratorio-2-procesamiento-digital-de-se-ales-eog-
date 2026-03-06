@@ -246,6 +246,28 @@ lags = np.arange(-(len(x1)-1), len(x1))
 ```
 
 2. Encuentre la representación gráfica y describa la secuencia resultante.
+```python
+
+# Gráficas
+plt.figure(figsize=(10,4))
+plt.subplot(1,2,1)
+plt.stem(n, x1)
+plt.stem(n, x2, linefmt='r-', markerfmt='ro', basefmt='r-')
+plt.xlabel("n")
+plt.ylabel("Amplitud")
+plt.title("Señales x1[n] y x2[n]")
+plt.legend(["Señal x1[n]", "Señal x2[n]"])
+
+plt.subplot(1,2,2)
+plt.stem(lags, corr)
+plt.xlabel("Desplazamiento")
+plt.ylabel("Correlación")
+plt.title("Correlación cruzada x1 vs x2")
+
+plt.tight_layout()
+plt.show()
+
+```
 Se realizan dos gráficas:
 Señales originales:
 
@@ -260,6 +282,7 @@ Ambas señales tienen la misma frecuencia pero están desfasadas.
 Correlación cruzada:
 
 <img width="850" height="671" alt="image" src="https://github.com/user-attachments/assets/0a15507e-69c8-4da0-a8ae-962841e28ca8" />
+
 
 
 La correlación cruzada genera una secuencia de 17 muestras, ya que:
