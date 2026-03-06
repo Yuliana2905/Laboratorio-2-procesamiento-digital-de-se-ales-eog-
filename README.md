@@ -226,6 +226,49 @@ plt.show()
 
 ## PARTE B 
 
+Defina las señales:  
+
+<img width="1233" height="265" alt="image" src="https://github.com/user-attachments/assets/9d9a67ec-85cf-4339-8c26-5b566ad8a2cf" />
+
+
+1. Encuentre la correlación cruzada entre ambas señales.
+La correlación cruzada permite medir el grado de similitud entre dos señales cuando una se desplaza respecto a la otra.
+Matemáticamente se expresa como:
+donde 
+𝑘 representa el desplazamiento entre las señales.
+En Python se calcula utilizando la función np.correlate().
+```python
+
+# Correlación cruzada
+corr = np.correlate(x1, x2, mode='full')
+lags = np.arange(-(len(x1)-1), len(x1))
+
+```
+
+2. Encuentre la representación gráfica y describa la secuencia resultante.
+Se realizan dos gráficas:
+Señales originales:
+
+<img width="990" height="390" alt="image" src="https://github.com/user-attachments/assets/ee59dc22-e126-45ea-b3f3-4ff2712e4369" />
+
+
+
+
+Se representan las señales discretas:
+x1[n] (coseno)
+x2[n] (seno)
+
+Ambas señales tienen la misma frecuencia pero están desfasadas.
+
+Correlación cruzada
+
+La correlación cruzada genera una secuencia de 17 muestras, ya que:
+2𝑁−1=2(9)−1=17
+Esta secuencia muestra el nivel de similitud entre las dos señales para diferentes desplazamientos.
+
+Debido al desfase entre el seno y el coseno, el valor máximo de correlación no ocurre exactamente en el desplazamiento cero.
+4. Responda ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales? 
+
 ## PARTE C
 
 A partir de la señal adquirida mediante el sistema de adquisición de datos, se determio el periodo de muestreo Ts a partir de la diferencia entre muestras consecutivas de tiempo, posterior a esto se calcula la frecuencia de muestres Fs como Fs=1/Ts y  la frecuancia de Nyquist que corresponde a FN= Fs/2, la frecuencia de muestreo utilizada para esta práctica sera cuatro veces la frecuencia de Nyquist fs​=4fN esto garantiza que la seal sea muestreada con suficiente resolución temporal, evitando pérdidas de infromación en el proceso de digitalización.
